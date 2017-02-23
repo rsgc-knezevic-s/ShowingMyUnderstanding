@@ -29,7 +29,46 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
+
+canvas.defaultLineWidth = 74
+
+//draw blue circles
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color.blue
+canvas.lineColor = Color.blue
+canvas.drawEllipse(centreX: 75, centreY: 75, width: 75, height: 75)
+canvas.drawEllipse(centreX: 75, centreY: 225, width: 75, height: 75)
+canvas.drawLine(fromX: 75, fromY: 75, toX: 75, toY: 225)
+canvas.drawLine(fromX: 75, fromY: 225, toX: 150, toY: 75)
+
+
+//draw red circles
+canvas.fillColor = Color.red
+canvas.lineColor = Color.red
+canvas.drawEllipse(centreX: 225, centreY: 75, width: 75 , height: 75)
+canvas.drawEllipse(centreX: 225, centreY: 225, width: 75 , height: 75)
+canvas.drawLine(fromX: 225, fromY: 75, toX: 225, toY: 225)
+canvas.drawLine(fromX: 225, fromY: 225, toX: 150, toY: 75)
+
+
+//middle part
+canvas.fillColor = Color.black
+canvas.lineColor = Color.black
+canvas.defaultLineWidth = 1
+canvas.drawEllipse(centreX: 150, centreY: 75, width: 75 , height: 75)
+
+for x in stride(from: 112, through: 188, by: 1){
+    canvas.drawLine(fromX: 150, fromY: 157, toX: x, toY: 80)
+}
+
+
+
+
+
+
+
+
+
 
 
 /*:
