@@ -19,7 +19,33 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this command and add your code below...
+
+// Generate a random number
+let number = random(from: 0, toButNotIncluding: 300)
+let h = random(from: 15, toButNotIncluding: 45)
+
+canvas.drawShapesWithFill = false
+if (number > 150){
+        for z in stride(from: 10, through: 290, by: h){
+    for x in stride(from: 10, through: 290, by: h){
+        canvas.drawEllipse(centreX: z , centreY: x, width: h + x, height: x)
+        
+    }
+    }
+}
+else{
+    for z in stride(from: 10, through: 290, by: h){
+        for x in stride(from: 10, through: 290, by: h){
+            canvas.drawEllipse(centreX: z , centreY: x, width:  x, height: number)
+            
+        }
+    }
+    
+}
+
+
+
+
 
 /*:
  ## Template code

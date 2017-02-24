@@ -29,7 +29,15 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
+canvas.defaultLineWidth = 10
+for x in stride(from: 25, through: 300, by: 50){
+    for y in stride(from: 50, through: 350, by: 100){
+    canvas.drawLine(fromX: x - 25, fromY: y, toX: x, toY: y)
+    canvas.drawLine(fromX: x, fromY: y - 25, toX: x + 25, toY: y - 25)
+}
+}
+
+
 
 
 /*:

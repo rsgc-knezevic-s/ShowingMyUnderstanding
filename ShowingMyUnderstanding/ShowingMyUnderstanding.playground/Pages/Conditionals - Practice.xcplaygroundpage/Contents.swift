@@ -30,7 +30,25 @@ let canvas = Canvas(width: 300, height: 300)
 // Generate a random number
 let number = random(from: 0, toButNotIncluding: 2)
 
-// Replace this comment and add your code below...
+
+//if statement
+if ( number == 1){
+    canvas.drawShapesWithFill = true
+}
+    
+else{
+   canvas.drawShapesWithFill = false
+}
+
+canvas.borderColor = Color.black
+
+//circle drawings
+for x in stride(from: 10, through: 290, by: 20){
+    for y in stride(from: 10, through: 290, by: 20){
+    canvas.fillColor = Color(hue: number * x, saturation: 50, brightness: 90, alpha: 100)
+    canvas.drawEllipse(centreX: x, centreY: y, width: 20, height: 20)
+    }
+}
 
 /*:
  ## Template code
