@@ -23,17 +23,29 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-
-for y in stride(from: 15, through: 50, by: 1){
-    canvas.drawLine(fromX: 25, fromY:50 , toX: 275, toY: y)
+//big red triangle
+canvas.lineColor = Color.red
+for y in stride(from: 40, through: 75, by: 1){
+    canvas.drawLine(fromX: 10, fromY:75 , toX: 290, toY: y)
 }
 
-for x in stride(from: 130, through: 200, by: 1){
-    canvas.drawLine(fromX: 250, fromY: 10, toX: x, toY: 235)
+//big yellow triangle
+canvas.lineColor = Color.yellow
+for x in stride(from: 100, through: 145, by: 1){
+    canvas.drawLine(fromX: 250, fromY: 10, toX: x, toY: 290)
 }
 
+//big black triangle
+canvas.lineColor = Color.black
+for z in stride(from: 35, through: 70, by: 1){
+    canvas.drawLine(fromX: 200, fromY: 290, toX: z, toY: 10)
+}
 
-
+//small yellow triangle
+canvas.lineColor = Color.red
+for a in stride(from: 53, through: 75, by: 1){
+    canvas.drawLine(fromX: 10, fromY: 75, toX: 190, toY: a)
+}
 
 
 
