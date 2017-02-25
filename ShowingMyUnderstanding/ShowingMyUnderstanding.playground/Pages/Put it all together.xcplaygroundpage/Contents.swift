@@ -21,9 +21,21 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 300, height: 300)
 
-// Replace this comment and add your code below...
-
-
+canvas.drawShapesWithFill = false
+for x in stride(from: 0, through: 30, by: 1){
+    let diameter = random(from: 30, toButNotIncluding: 200)
+    
+    if (diameter > 30){
+        canvas.borderColor = Color(hue: diameter * x, saturation: 100, brightness: 100, alpha: 100)
+    }
+    else{
+        canvas.borderColor = Color.black
+    }
+    
+    let x = random(from: 0, toButNotIncluding: 301)
+    let y = random(from: 0, toButNotIncluding: 301)
+    canvas.drawEllipse(centreX: x, centreY: y, width: diameter, height: diameter)
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
